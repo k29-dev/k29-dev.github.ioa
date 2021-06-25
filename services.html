@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  </style>
+
+   <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+</style>
+
+
+<style>
+ *{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    
+    font-family: Arial;
+    font-size: 14px;
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 40px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+
+
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Style the close button */
+.topright {
+    float: right;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.topright:hover {color: red;}
+</style>
+	<title>Our Services</title>
+
+  <style>
+    .marquee{
+      transition:10s;}
+  </style>
+
+<style>
+  h3{
+    text-align:left; 
+  }
+</style>
+
+<style>
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc; 
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+</style>
+
+
+</head>
+
+<body>
+
+	<ul>
+   <li style="float:right"><a class="active" href="contacts.html">Contact Us</a>
+   <li style="float:right"><a class="active" href="signup.html">Sign Up</a>
+	 <li style="float:right"><a class="active" href="services.html">Our Services</a>
+	 <li style="float:right"><a class="active" href="about.html">About Us</a>
+   <li style="float:right"><a class="active" href="index.html">Home</a>
+  </ul>
+
+<div class="main">
+  <img src="queencake.jpg" alt="awesome" style="width:20%" align="left" >
+  <h2><center>CATERING IS THE REASON WHY WE LIVE</center></h2>
+  <h4>Our Main service is to provide procedures on how to prepare and cook certain kinds of food</h4>
+  <h4>Our Gallery</h4>
+</div>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> View all</button>
+  <button class="btn" onclick="filterSelection('pilau')">Pilau</button>
+  <button class="btn" onclick="filterSelection('matoke')">Matoke</button>
+  <button class="btn" onclick="filterSelection('cake')">Cakes</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column pilau">
+    <div class="content">
+      <img src="rice.jpg" alt="Pilau" style="width:100%">
+      <h6>1</h>
+    </div>
+  </div>
+  <div class="column pilau">
+    <div class="content">
+    <img src="pilau.jpg" alt="Pilau" style="width:100%">
+      <h6>2</h6>
+    </div>
+  </div>
+  <div class="column pilau">
+    <div class="content">
+    <img src="pil1.jpg" alt="Pilau" style="width:100%">
+      <h6>3</h6>
+    </div>
+  </div>
+  
+  <div class="column matoke">
+    <div class="content">
+      <img src="banana.jpg" alt="Matoke" style="width:100%">
+      <h6>1</h6>
+    </div>
+  </div>
+  <div class="column matoke">
+    <div class="content">
+    <img src="bin1.jpg" alt="Matoke" style="width:100%">
+      <h6>2</h6>
+    </div>
+  </div>
+ <div class="column matoke">
+    <div class="content">
+    <img src="bin3.jpg" alt="Matoke" style="width:100%">
+      <h6>3</h6>
+    </div>
+  </div>
+
+  <div class="column cake">
+    <div class="content">
+      <img src="cake.jpg" alt="Cakes" style="width:100%">
+      <h6>1</h6>
+    </div>
+  </div>
+  <div class="column cake">
+    <div class="content">
+    <img src="c1.jpg" alt="Cakes" style="width:100%">
+      <h6>2</h6>
+    </div>
+  </div>
+  <div class="column cake">
+    <div class="content">
+    <img src="c2.jpg" alt="Cakes" style="width:100%">
+      <h6>3</h6>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<hr></hr>
+<script>
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+  <br><i>note</i></br>
+  <hr></hr>
+  <br><marquee>Close the current page by clicking on the X button positioned at the right side of the current page</marquee></br>
+  <hr></hr>
+
+<h4>PILAU MASALA AND PILAU BEEF</h4>
+<div class="tab">
+  <button class="tablinks" onclick="openPilau(event, 'Ingredients')">Ingredients required for Pilau</button>
+  <button class="tablinks" onclick="openPilau(event, 'PilauPre')">Pilau Preparation Procedure</button>
+  <button class="tablinks" onclick="openPilau(event, 'Table')">Table Preparation</button>
+</div>
+
+<div id="Ingredients" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h4>Ingredients for 8 Serving </h4>
+1/4 cup vegetables oil(60ml)</br>
+2 medium red onions,thinly sliced</br>
+4 cloves garlic,minced</br>
+2 tablespoons ginger,minced</br>
+1 serrano chile,finely chopped</br>
+1 tablespoon pilau masala</br>
+2 beef stock cubes</br>
+1 cinnamon stick</br>
+1/4 cup fresh cilantro,roughly chopped(10g)</br>
+1 lb beef sirloin,cubed(455g)</br>
+3 roma tomatoes, diced</br>
+1 lb potato,waxy,peeled and cut into 1 inch(2cm) chunkd(455g)</br>
+4 cups water(960ml)</br>
+2 cups basmati rice(400g)</br>
+</div>
+
+<div id="PilauPre" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h4>Steps Required</h4>
+1, Make the pilau masala: In a medium bowl, combine the cumin,paprika,cardamom, black pepper,
+and cloves. Set a side.</br>
+2, Heat a large pot over medium-high heat. Add the oil and red onion and saute for 10-15 minutes, until ark brown.</br>
+3, Add the garlic,ginder, serrano chile, pilau masala, beef stock cubes, cinnamon stick and cilantro. Cook for 1-2 minutes,until fragment.</br>
+4, Add the beef and cook until browned, about 8 minutes.</br>
+5, Add the tomatoes and cook for 4-5 minutes, until the tomatoes have released their liquid</br>
+6, Add the potatoes and water. Bring to boil and cook for 10 minutes.</br>
+</div>
+
+<div id="Table" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h4>Dining </h4>
+ Ensure that the dining table is well aranged and cleaned.</br>
+ Put the ready meal in the dishes.</br>
+ Bring to the dining hall.</br>
+ Serve and enjoy the delicacy.</br>
+</div>
+<hr></hr>
+<script>
+function openPilau(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+<h4>MATOKE AND BEEF STEW</h4></p>
+Matoke is a kenyan food that has an origin in Kissi lands. Matoke can be prepared with or without. Below here, is a preparation with beef stew;</br>
+
+<button class="accordion">Matoke and Beef Stew</button>
+<div class="panel">
+  Ingredients For 4 Serving</br>
+1 bunch bananas</br>
+500g beef, chopped into pieces and washed</br>
+3 tomatoes, chopped</br>
+1 onion, chopped</br>
+carrots, chopped and washed dhania</br>
+1 tablespoon salt</br>
+curry powder</br>
+cooking oil</br>
+
+<b>Steps</b> </br>
+1, Smear the oil on your hands and peel the bananas. The oil helps your hand not to get sticky liquids from the bananas.</br>
+2, Put the beef in a cooking pot with a pinch of salt and add one cup of water, then place over heat and cover.Then let it boil for 30 minutes till it is tender.</br>
+3, Drain the soup that is remaining and put a side. Preserve it for soup later. Add oil in the meat and heat as you stir to mix then add onion. Let the onions fry with the meat for 3 minutes and tomatoes and add tomatoes and carrots, stir to mix then cover to simmer until the tomatoes have soften.</br>
+4, Add the bananas to beef and stir. Add the preserved soup if not enough add some water with some salt, dhania and curry powder. Cover and let it simmer for 15 minutes or until the bananas are soft.
+</br>
+5, Remove from heat and serve</br>
+</div>
+<hr></hr>
+
+
+<h4>HOMEMADE CAKE RECIPE</h4></p>
+This is simply type of cake that is normally prepared at home by individuals. It could be used as a surprise for BirthDay Party for a particular person in a family.
+<button class="accordion">HOMEMADE CAKE RECIPE</button>
+<div class="panel">
+ <h4>Homemade Cake</h4>
+Ingredients Of Homemade Cake for 6 Serving</br>
+3 cup all purpose flour</br>
+1.5 cup powdered sugar</br>
+4 cup egg</br>
+1 cup butter</br>
+2 teaspoon baking soda</br>
+1 cup milk</br>
+2 teaspoon vanilla essential</br>
+
+<p>Procedure for Baking a Hommemade cake</p>
+1, Cream together butter-sugar and then blend with beaten eggs.</br>
+2,Combine Flour mix and beaten eggs.</br>
+3,Bake the cake as per your convenience.</br>
+4,Cook for about 45 minutes.</br>
+5,Check with a knife or skewer if it is cooked and serve</br>
+</div>
+<hr></hr>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+
+</body>
+</html>

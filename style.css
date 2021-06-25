@@ -1,0 +1,24 @@
+body {
+    background: linear-gradient(to bottom, #cc9900 0%, #00ff99 100%);
+}
+a:link, a:visited {
+    background-color:#333 ;
+    color: white;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+    float: right;
+    font-size: 14px;
+  
+
+}
+
+
+a:hover, a:active {
+    background-color: #4CAF50;
+}
+
+
+    
